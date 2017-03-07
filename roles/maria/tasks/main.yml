@@ -1,0 +1,11 @@
+- name: Install MariaDB Server
+  apt: name=mariadb-server state=latest update_cache=true
+
+- name: Install MySQLdb
+  apt: name=python-mysqldb state=latest update_cache=true
+
+- name: Create new database 
+  mysql_db: name={{dbname}} state=present
+
+- name: Add Database User
+  mysql_user: name={{ dbuser }} password={{dbpass}} priv='*.*:ALL' state=present

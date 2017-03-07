@@ -1,0 +1,21 @@
+---
+- name: Add Nginx Repo
+  apt_repository: repo='ppa:nginx/stable' state=present
+
+- name: Install Nginx
+  apt: pkg=nginx state=latest update_cache=true
+  notify:
+    - Start Nginx
+
+- name: Remove Default Config
+  file: dest=/etc/nginx/sites-enabled/default state=absent
+  notify: 
+    - Reload Nginx
+
+- name: Add Server {{ domain }} Config
+  template: src={{ domain }}.j2 dest=/etc/nginx/sites-available/{{ domain }} owner=root group=root
+
+- name: Enable Site Config
+  file: src=/etc/nginx/sites-available/{{ domain }} dest=/etc/nginx/sites-enabled/{{ domain }} state=link
+  notify: 
+    - Reload Nginx
