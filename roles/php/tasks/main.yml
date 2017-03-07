@@ -1,0 +1,9 @@
+---
+- name: Add PHP7 Repository 
+  apt_repository: repo='ppa:ondrej/php' state=present
+
+- name: Install PHP7
+  apt: pkg={{ item }} state=latest update_cache=true
+  with_items:
+    - php7.0-fpm
+    - php7.0-mysql

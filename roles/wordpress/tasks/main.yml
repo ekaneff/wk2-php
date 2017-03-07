@@ -1,0 +1,9 @@
+---
+- name: Download WordPress
+  get_url: url=http://wordpress.org/wordpress-{{ wp_version }}.tar.gz dest=/var/www/html/wordpress-{{ wp_version }}.tar.gz
+
+- name: Extract Wordpress Files
+  command: chdir=/var/www/html/ /bin/tar xvf wordpress-{{ wp_version }}.tar.gz -C /var/www/html/php
+
+- name: Copy WordPress config file
+  template: src=wp-config.php dest=/var/www/html/php

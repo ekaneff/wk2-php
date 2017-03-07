@@ -3,5 +3,5 @@
 DIRECTORY="/var/www/html/php"
 
 if [ ! -d "$DIRECTORY" ]; then
-	mkdir /var/www/html/php
+	mkdir $DIRECTORY
 fi

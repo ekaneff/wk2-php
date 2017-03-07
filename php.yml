@@ -2,9 +2,8 @@
   - hosts: web
     become: true
     user: root
-    tasks: 
-      - name: Create Folder in /var/www/html
-        script: setup.sh
     roles: 
       - nginx
       - maria
+      - php
+      - wordpress

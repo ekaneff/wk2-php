@@ -1,0 +1,6 @@
+---
+wp_version: 4.7.3
+wp_sha256sum: 42ca594afc709cbef8528a6096f5a1efe96dcf3164e7ce321e87d57ae015cc82
+auto_up_disable: false
+core_update_level: true
+project_dir: php

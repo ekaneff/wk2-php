@@ -6,6 +6,9 @@
   apt: pkg=nginx state=latest update_cache=true
   notify:
     - Start Nginx
+    
+- name: Create Folder in /var/www/html
+  script: setup.sh
 
 - name: Remove Default Config
   file: dest=/etc/nginx/sites-enabled/default state=absent
