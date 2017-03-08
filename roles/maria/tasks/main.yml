@@ -9,4 +9,4 @@
   mysql_db: name={{dbname}} state=present
 
 - name: Add Database User
-  mysql_user: name={{ dbuser }} password={{dbpass}} priv='*.*:ALL' state=present
+  mysql_user: name={{dbuser}} password={{dbpass}} priv='*.*:ALL' state=present
