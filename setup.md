@@ -5,7 +5,11 @@ This repository is one of three that are part of a multiple pipeline deployment 
 
 For this project repository, we will be using Wordpress to demonstrate the set up and deployment of PHP applications using this pipeline system.
 
->Note: You do not have to install these repositories in order, nor do you need to use them all for the pipeline to work. 
+>Note: You do not have to install these repositories in order, nor do you need to use them all for the pipeline to work. If you have already followed the setup guide for another repository, you can skip to the [Running the Ansible Playbook](#three) section.
+
+>This is only one of the three pipelines feeding into our servers. The others with setup and deployment instructions can be found at: <br>
+>[https://github.com/ekaneff/wk2-static](https://github.com/ekaneff/wk2-static) <br>
+>[https://github.com/ekaneff/wk2-node](https://github.com/ekaneff/wk2-node)
 
 ##Table of Contents
 * [Set up the VPS](#one)
@@ -62,7 +66,7 @@ ansible all -m raw -s -a "sudo apt-get -y install python-simplejson" -u root --p
 
 Enter `yes` if prompted.
 
-If your keys were successfully, you should see two success messages about `python` being installed.
+If your keys were successful, you should see two success messages about `python` being installed.
 
 The last command you will need to run for this playbook is:
 
