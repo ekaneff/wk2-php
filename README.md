@@ -3,7 +3,7 @@
 
 For this tutorial, we will be using Wordpress files to demonstrate the process of deploying a PHP application to a virtual private server that was set up using Ansible through the use of remote git repositories.
 
-If you have not done so already, follow the tutorial for setting up the VPS using Digital Ocean and Ansible [here](). 
+If you have not done so already, follow the tutorial for setting up the VPS using Digital Ocean and Ansible [here](setup.md). 
 
 >Note: This is only one of the three pipelines feeding into our servers. The others with setup and deployment instructions can be found at: <br>
 >[https://github.com/ekaneff/wk2-static](https://github.com/ekaneff/wk2-static) <br>
