@@ -7,7 +7,7 @@ server {
 
     index index.php index.html index.htm index.nginx-debian.html;
 
-    server_name php.{{stage_ip}}.xip.io;
+    server_name php.{{production_ip}}.xip.io;
 
     location / {
             
@@ -42,7 +42,7 @@ server {
 
     index index.html index.nginx-debian.html;
 
-    server_name html.{{stage_ip}}.xip.io;
+    server_name html.{{production_ip}}.xip.io;
 
     location / {
         try_files $uri $uri/ =404;
@@ -60,7 +60,7 @@ server {
     listen 80;
     listen [::]:80;
 
-    server_name node.{{stage_ip}}.xip.io;
+    server_name node.{{production_ip}}.xip.io;
 
     root /var/www/html/node;
     index index.html index.htm;
